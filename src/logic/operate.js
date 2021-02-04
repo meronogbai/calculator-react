@@ -6,25 +6,22 @@ export default function operate(numberOne, numberTwo, operation) {
   let result;
   switch (operation) {
     case '-':
-      result = x.minus(y).toString();
+      result = x.minus(y);
       break;
     case '+':
-      result = x.plus(y).toString();
+      result = x.plus(y);
       break;
-    case 'x':
-      result = x.times(y).toString();
+    case 'X':
+      result = x.times(y);
       break;
     case '÷':
-      result = x.div(y).toString();
-      break;
-    case '%':
-      result = `${y.div(100)}%`;
+      result = x.div(y);
       break;
     case '+/-':
-      result = x.times(y).times(-1).toString();
+      result = x.times(y).times(-1);
       break;
     default:
       break;
   }
-  return result;
+  return result.toString();
 }
