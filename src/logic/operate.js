@@ -20,6 +20,9 @@ export default function operate(numberOne, numberTwo, operation) {
     case '+/-':
       result = x.times(y).times(-1);
       break;
+    case '%':
+      result = y.mod(x);
+      break;
     default:
       break;
   }

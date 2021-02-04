@@ -8,6 +8,7 @@ export default function calculate(calcData, buttonName) {
     case '-':
     case 'X':
     case '÷':
+    case '%':
       result = operate(total, next, operation);
       total = result;
       next = null;
@@ -15,12 +16,6 @@ export default function calculate(calcData, buttonName) {
       break;
     case '=':
       result = operate(total, next, operation);
-      total = result;
-      next = null;
-      operation = null;
-      break;
-    case '%':
-      result = operate(operate(total, next, operation), '100', '÷');
       total = result;
       next = null;
       operation = null;
