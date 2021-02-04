@@ -2,23 +2,28 @@ import operate from './operate';
 
 export default function calculate(calcData, buttonName) {
   let { total, next, operation } = calcData;
-  let result;
   switch (buttonName) {
     case '+':
     case '-':
     case 'X':
     case '÷':
     case '%':
-      result = operate(total, next, operation);
-      total = result;
+      total = operate(total, next, operation);
       next = null;
       operation = buttonName;
       break;
     case '=':
-      result = operate(total, next, operation);
-      total = result;
+      total = operate(total, next, operation);
       next = null;
       operation = null;
+      break;
+    case '+/-':
+      next *= -1;
+      break;
+    case '.':
+      if (!next.includes('.')) {
+        next += '.';
+      }
       break;
     case 'AC':
       total = null;
@@ -28,5 +33,5 @@ export default function calculate(calcData, buttonName) {
     default:
       break;
   }
-  return result;
+  return { total, next, operation };
 }
