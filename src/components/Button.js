@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function Button({ name, clickHandler }) {
-  const handleClick = buttonName => clickHandler(buttonName);
+  const handleClick = () => clickHandler(name);
 
   return (
     <button type="button" onClick={handleClick}>

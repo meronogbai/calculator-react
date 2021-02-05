@@ -10,7 +10,7 @@ export default class App extends Component {
     this.state = {
       total: null,
       next: null,
-      operatiion: null,
+      operation: null,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -18,7 +18,7 @@ export default class App extends Component {
 
   handleClick(buttonName) {
     this.setState(state => calculate(
-      { total: state.total, next: state.next, operatiion: state.operatiion },
+      { total: state.total, next: state.next, operation: state.operation },
       buttonName,
     ));
   }
