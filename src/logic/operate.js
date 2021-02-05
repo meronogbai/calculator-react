@@ -15,10 +15,11 @@ export default function operate(numberOne, numberTwo, operation) {
       result = x.times(y);
       break;
     case '÷':
-      result = x.div(y);
-      break;
-    case '%':
-      result = x.mod(y);
+      if (numberTwo !== '0') {
+        result = x.div(y);
+      } else {
+        return null;
+      }
       break;
     default:
       break;
