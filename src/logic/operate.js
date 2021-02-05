@@ -21,9 +21,6 @@ export default function operate(numberOne, numberTwo, operation) {
         return null;
       }
       break;
-    case '%':
-      result = x.mod(y);
-      break;
     default:
       break;
   }

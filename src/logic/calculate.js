@@ -23,7 +23,6 @@ export default function calculate(calcData, buttonName) {
     case '-':
     case 'X':
     case '÷':
-    case '%':
       if (total && next) {
         if (!operation) {
           operation = buttonName;
@@ -36,7 +35,9 @@ export default function calculate(calcData, buttonName) {
       next = null;
       break;
     case '=':
-      if (total) {
+      if (!operation) {
+        break;
+      } else if (total && next) {
         total = operate(total, next, operation);
       } else {
         total = next;
@@ -47,6 +48,15 @@ export default function calculate(calcData, buttonName) {
     case '+/-':
       if (next) {
         next = operate(next, '-1', 'X');
+      } else if (total) {
+        total = operate(total, '-1', 'X');
+      }
+      break;
+    case '%':
+      if (next) {
+        next = operate(next, '100', '÷');
+      } else if (total) {
+        total = operate(total, '100', '÷');
       }
       break;
     case '.':
