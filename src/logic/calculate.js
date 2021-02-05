@@ -45,10 +45,14 @@ export default function calculate(calcData, buttonName) {
       next = null;
       break;
     case '+/-':
-      next = (Number(next) * -1).toString();
+      if (next) {
+        next = operate(next, '-1', 'X');
+      }
       break;
     case '.':
-      if (!next.includes('.')) {
+      if (!next) {
+        next = '0.';
+      } else if (!next.includes('.')) {
         next += '.';
       }
       break;
