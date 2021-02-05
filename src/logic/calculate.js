@@ -24,12 +24,12 @@ export default function calculate(calcData, buttonName) {
     case 'X':
     case '÷':
     case '%':
-      if (!operation) {
-        operation = buttonName;
-      }
-      if (total) {
+      if (total && next) {
+        if (!operation) {
+          operation = buttonName;
+        }
         total = operate(total, next, operation);
-      } else {
+      } else if (next) {
         total = next;
       }
       operation = buttonName;
