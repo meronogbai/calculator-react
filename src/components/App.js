@@ -24,10 +24,11 @@ export default class App extends Component {
   }
 
   render() {
+    const { total, next } = this.state;
     return (
       <div className="App">
-        <Display />
-        <ButtonPanel />
+        <Display result={next || total || '0'} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
