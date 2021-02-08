@@ -1,11 +1,15 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 import App from './App';
 
 const Routes = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={App} />
-    </Switch>
+    <Navbar />
+    <main>
+      <Switch>
+        <Route exact path="/" component={App} />
+      </Switch>
+    </main>
   </BrowserRouter>
 );
 
