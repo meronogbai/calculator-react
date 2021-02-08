@@ -4,7 +4,7 @@ import Button from './Button';
 export default function ButtonPanel({ clickHandler }) {
   const handleClick = buttonName => clickHandler(buttonName);
   return (
-    <div className="">
+    <div className="ButtonPanel">
       <div className="group-1">
         <Button clickHandler={handleClick} name="AC" />
         <Button clickHandler={handleClick} name="+/-" />

@@ -1,0 +1,28 @@
+.App {
+  width: 700px;
+}
+
+.Display {
+  background-color: #858694;
+  color: white;
+  text-align: right;
+  padding: 5px;
+}
+
+.ButtonPanel {
+  width: 100%;
+}
+
+.ButtonPanel > * {
+  display: flex;
+  justify-content: stretch;
+  gap: 1px;
+}
+
+.Button {
+  flex-basis: 25%;
+}
+
+.zero {
+  flex-basis: 50%;
+}
