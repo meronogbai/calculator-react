@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .App {
   width: 700px;
 }
@@ -6,7 +12,10 @@
   background-color: #858694;
   color: white;
   text-align: right;
-  padding: 5px;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  padding-right: 10px;
 }
 
 .ButtonPanel {
@@ -16,11 +25,13 @@
 .ButtonPanel > * {
   display: flex;
   justify-content: stretch;
-  gap: 1px;
+  height: 100px;
 }
 
 .Button {
   flex-basis: 25%;
+  background-color: #e0e0e0;
+  border: 1px solid #bababa;
 }
 
 .zero {
