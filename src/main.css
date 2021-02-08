@@ -6,6 +6,7 @@
 
 .App {
   width: 700px;
+  margin: 0 auto;
 }
 
 .Display {
@@ -32,8 +33,13 @@
   flex-basis: 25%;
   background-color: #e0e0e0;
   border: 1px solid #bababa;
+  cursor: pointer;
 }
 
 .zero {
   flex-basis: 50%;
+}
+
+.operator {
+  background-color: #f5913e;
 }
