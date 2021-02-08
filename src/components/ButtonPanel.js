@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPanel({ clickHandler }) {
+const ButtonPanel = ({ clickHandler }) => {
   const handleClick = buttonName => clickHandler(buttonName);
   return (
     <div className="ButtonPanel">
@@ -36,8 +36,10 @@ export default function ButtonPanel({ clickHandler }) {
       </div>
     </div>
   );
-}
+};
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
+
+export default ButtonPanel;
