@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Button({ name, clickHandler }) {
+const Button = ({ name, clickHandler }) => {
   const handleClick = () => clickHandler(name);
   const getClass = name => {
     switch (name) {
@@ -21,9 +21,11 @@ export default function Button({ name, clickHandler }) {
       {name}
     </button>
   );
-}
+};
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
+
+export default Button;

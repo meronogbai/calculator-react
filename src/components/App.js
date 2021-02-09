@@ -3,7 +3,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-export default function App() {
+const App = () => {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
@@ -23,4 +23,6 @@ export default function App() {
       <ButtonPanel clickHandler={handleClick} />
     </div>
   );
-}
+};
+
+export default App;

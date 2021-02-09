@@ -8,7 +8,7 @@
 
 - Javascript
 - React
-- npm`
+- npm
 
 ## Live Demo
 
@@ -33,6 +33,10 @@ Clone this repo by running `git clone git@github.com:meronokbay/calculator-react
 ### Usage
 
 Run `npm start` to view the app in your default browser.
+
+### Testing
+
+Run `npm test` to run unit and integration tests.
 
 ## Author
 
