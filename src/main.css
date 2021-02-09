@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: #f5913e;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #f5913e;
+}
+
+.App {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.Display {
+  background-color: #858694;
+  color: white;
+  text-align: right;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  padding-right: 10px;
+}
+
+.ButtonPanel {
+  width: 100%;
+}
+
+.ButtonPanel > * {
+  display: flex;
+  justify-content: stretch;
+  height: 100px;
+}
+
+.Button {
+  flex-basis: 25%;
+  background-color: #e0e0e0;
+  border: 1px solid #bababa;
+  cursor: pointer;
+}
+
+.zero {
+  flex-basis: 50%;
+}
+
+.operator {
+  background-color: #f5913e;
+}

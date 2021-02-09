@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPanel({ clickHandler }) {
+const ButtonPanel = ({ clickHandler }) => {
   const handleClick = buttonName => clickHandler(buttonName);
   return (
-    <div className="">
+    <div className="ButtonPanel">
       <div className="group-1">
         <Button clickHandler={handleClick} name="AC" />
         <Button clickHandler={handleClick} name="+/-" />
@@ -36,8 +36,10 @@ export default function ButtonPanel({ clickHandler }) {
       </div>
     </div>
   );
-}
+};
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
+
+export default ButtonPanel;
